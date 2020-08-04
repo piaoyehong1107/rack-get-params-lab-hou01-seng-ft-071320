@@ -26,6 +26,7 @@ class Application
       add_term = req.params["item"]
       if @@items.include?(add_term)
         @@cart.push(add_term)
+        req.post
       else
         resp.write "We don't have that item"
       end

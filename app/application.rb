@@ -25,7 +25,7 @@ class Application
     elsif req.path.match(/add/)
       add_term = req.params["item"]
       if @@items.include?(add_term)
-        req.post?(@@cart.push(add_term))
+        req.post?()
       else
         resp.write "We don't have that item"
       end
